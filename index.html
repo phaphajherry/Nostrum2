@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="http://fonts.cdnfonts.com/css/chunkfive-print" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title></title>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 5% 0;
+            color: rgba(0, 0, 0, 0.700);
+        }
+        
+        h1 {
+            font-family: 'ChunkFive', sans-serif;
+        }
+        
+        .container {
+            padding-left: 200px;
+            padding-right: 200px;
+        }
+        
+        hr {
+            width: 100px;
+            height: .3px;
+            padding-bottom: 30px;
+        }
+        
+        .NOP {
+            padding-right: 50px;
+        }
+        
+        #Comments {
+            padding-bottom: 100px;
+        }
+        
+        .title {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding-top: 100px;
+            padding-bottom: 50 px;
+            color: orange;
+        }
+        
+        .form-group {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+        
+        #button {
+            {
+                % comment %
+            }
+            padding-bottom: 100px;
+            {
+                % endcomment %
+            }
+            padding-top: 50px;
+        }
+        
+        .btn {
+            padding: 10px 35px 10px 35px;
+            border: 0px;
+            border-radius: 0px;
+            color: white;
+            background-color: #e46227;
+            font-size: small;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <p class="text-center">Thank you for choosing Golden Shore RV Resort. To make a reservation, call us at 1 (800) 668-3581 or complete the information below to submit a reservation inquiry. Within 48 hours we will contact you to confirm availability, and to assist
+                with any questions you may have.</p>
+        </div>
+        <div class="container">
+            <form class="form-group" id="form" method="POST">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="FirstName" id="Fname" placeholder="First Name*" required value="">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="LastName" id="Lname" placeholder="Last Name*" required>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="City" id="city" placeholder="City*" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="State" id="State" placeholder="State/Province*" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="zipcode" id="zcode" placeholder="Zip Code (Postal Code)*" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="Pnumber" id="Pnumber" placeholder="Phone Number*" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email*" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <select class="form-control" id="sel1" placeholder="" required>
+                          <option value="-1">-- Best time to contact you. --</option>
+                          <option value="1">Morning</option>
+                          <option value="2">Afternoon</option>
+                          <option value="3">Evening</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <select class="form-control" id="sel2" placeholder="" required>
+                        <option value="-1">-- How did you learn about us? --</option>
+                        <option value="1">Conventions</option>
+                        <option value="2">Guide Books</option>
+                        <option value="3">Web Search</option>
+                        <option value="4">Web Link</option>
+                        <option value="5">Trailer Life</option>
+                        <option value="6">Wheelers</option>
+                        <option value="7">WoodALL</option>
+                      </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="title text-center">
+                    <h1>Visiting Information</h1>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="NumberOfStays" id="NumberOfStays" placeholder="Number Of Stays*" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="Call" id="Call" placeholder="For stays over 1 month call (800) 668-3581" required>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <label class="NOP">Number Of Persons*</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="NOPR">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="NOPR">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio3" value="option3">
+                            <label class="form-check-label" for="NOPR">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio3" value="option4">
+                            <label class="form-check-label" for="NOPR">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio3" value="option5">
+                            <label class="form-check-label" for="NOPR">5 (Additional Charge)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio3" value="option6">
+                            <label class="form-check-label" for="NOPR">6 (Additional Charge)</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12">
+                        <label class="NOP">Number Of Pets*</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="NOP" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="NOP">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="NOP" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="NOP">2</label>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="PromoCode" id="city" placeholder="Promo Code">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="title text-center">
+                    <h1>RV Information</h1>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <label class="NOP">Type of RV</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="TOR" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="TOR">Motor Coach</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="TOR" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="TOR">Motor Home</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="TOR" id="inlineRadio3" value="option3">
+                            <label class="form-check-label" for="TOR">Fifth Wheel</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="TOR" id="inlineRadio3" value="option4">
+                            <label class="form-check-label" for="TOR">Trailer</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="TOR" id="inlineRadio3" value="option5">
+                            <label class="form-check-label" for="TOR">Camper</label>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <label class="NOP">Number of Slide Outs</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Noso" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="Noso">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Noso" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="Noso">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Noso" id="inlineRadio2" value="option4">
+                            <label class="form-check-label" for="Noso">3</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <select class="form-control" id="sel1" placeholder="">
+                      <option value="-1">-- Length of RV --</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+
+                    </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="title text-center">
+                    <h1>Group Information</h1>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <select class="form-control" id="sel1" placeholder="">
+                              <option value="-1">-- Total number of Pigs --</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                              <option value="13">13</option>
+                              <option value="14">14</option>
+                              <option value="15">15</option>
+                              <option value="16">16</option>
+                              <option value="17">17</option>
+                              <option value="18">18</option>
+                              <option value="19">19</option>
+                              <option value="20">20</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label class="NOP">Joined a Group?</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Jog" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Jog" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <select class="form-control" id="sel1" placeholder="">
+                    <option value="-1">-- Total number of Pigs --</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+
+                  </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="GroupContact" id="GroupContact" placeholder="Group Contact">
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="Comments" id="Comments" placeholder="Comments">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="checkbox" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="checkbox"> By selecting this box, I accept and understand the rules and regulations of Golden Shore RV Resort.</label>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 mt-4">
+                        <h4>Daily Deposit</h4>
+                        <p>First night deposit is required. Deposit(s) Will be refunded (less processing fee: $20) if the cancellation is received more than 2 days prior to arrival. Deposit(s) will be forfeited for cancellation(s) less than 48 hours prior
+                            to arrival.
+                        </p>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <h4>Weekly Deposit</h4>
+                        <p>$390.00 deposit is required for more than 2 weeks. $150.00 up to 2 weeks. Any changes or cancellations anytime forfeit $150.00 of your deposit</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <h4>Conditions / Policies</h4>
+                        <p>Check-In time: 2:00 pm – 7:00 pm<br> Check-Out time: 12 Noon</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <p>RV sites are available for check-in after 2:00 pm Refunds will not be issued for early departure – no exceptions Reservations are recommended</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <p>Rates are subject to change without prior noticeup to 2 weeks. Any changes or cancellations anytime forfeit $150.00 of your deposit Conditions / Policies Check-In time: 2:00 pm – 7:00 pm Check-Out time: Noon RV sites are available
+                            for check-in after 2PM Refunds will not be issued for early departure – no exceptions Reservations are recommended Rates are subject to change without prior notice</p>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 text-center" id="button">
+                        <button class="btn btn-secondary submit">Reserve Now</button>
+                    </div>
+
+
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('form').submit(function(e) {
+
+            })
+        })
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_fYs0ED0Yk6ak6viwotaHo");
+        })();
+    </script>
+    <script>
+        $('form').on('submit', function(event) {
+            event.preventDefault(); // prevent reload
+            console.log('Sent')
+            var formData = new FormData(this);
+            formData.append('service_id', 'service_wyu8rhg');
+            formData.append('template_id', 'template_5pjvwyp');
+            formData.append('user_id', 'user_fYs0ED0Yk6ak6viwotaHo');
+
+            $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+                type: 'POST',
+                data: formData,
+                contentType: false, // auto-detection
+                processData: false // no need to parse formData to string
+            }).done(function() {
+                alert('Your mail is sent!');
+            }).fail(function(error) {
+                alert('Oops... ' + JSON.stringify(error));
+            });
+        });
+    </script>
+
+</body>
+
+</html>
