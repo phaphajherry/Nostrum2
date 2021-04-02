@@ -18,11 +18,12 @@
         body {
             font-family: 'Lato', sans-serif;
             margin: 5% 0;
-            color: rgba(0, 0, 0, 0.700);
+            color: black;
         }
         
         h1 {
             font-family: 'ChunkFive', sans-serif;
+            opacity: 1 !important;
         }
         
         .container {
@@ -34,6 +35,17 @@
             width: 100px;
             height: .3px;
             padding-bottom: 30px;
+        }
+        
+        p,
+        h4,
+        select,
+        label {
+            opacity: .7;
+        }
+        
+        input {
+            opacity: .96;
         }
         
         .NOP {
@@ -48,12 +60,12 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             padding-top: 100px;
             padding-bottom: 50 px;
-            color: orange;
+            color: #dc7546;
         }
         
         .form-group {
-            padding-top: 6px;
-            padding-bottom: 6px;
+            padding-top: 4px;
+            padding-bottom: 4px;
         }
         
         #button {
@@ -72,7 +84,7 @@
             border: 0px;
             border-radius: 0px;
             color: white;
-            background-color: #e46227;
+            background-color: #dc7546;
             font-size: small;
         }
         
@@ -80,6 +92,34 @@
             .container {
                 padding-left: 30px;
                 padding-right: 30px;
+            }
+        }
+        
+        option {
+            background-color: white;
+            padding: 10px 20px 30px 40px;
+        }
+        
+        option:hover {
+            background-color: white i !important;
+            color: black i !important;
+        }
+        
+        div.form-geoup {
+            padding-top: 10px;
+        }
+        
+        .daily__devotion {
+            margin-top: -7px;
+        }
+        
+        div.acceptterms {
+            padding-top: 10px;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            label.acceptterms {
+                padding-top: 50px;
             }
         }
     </style>
@@ -117,12 +157,12 @@
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
-                            <input type="number" class="form-control" name="zipcode" id="zcode" placeholder="Zip Code (Postal Code)*" required>
+                            <input type="text" class="form-control zipcode" name="zipcode" id="zipcode" placeholder="Zip Code (Postal Code)*" pattern="\d{5}-?(\d{4})?" required>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
-                            <input type="number" class="form-control" name="Pnumber" id="Pnumber" placeholder="Phone Number*" required>
+                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number*" required>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
@@ -132,25 +172,25 @@
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
-                            <select class="form-control" id="sel1" placeholder="" required>
-                          <option value="-1">-- Best time to contact you. --</option>
-                          <option value="1">Morning</option>
-                          <option value="2">Afternoon</option>
-                          <option value="3">Evening</option>
+                            <select class="form-control" id="time__to__contact" placeholder="" required>
+                          <option value="">Best time to contact you.</option>
+                          <option value="morning">Morning</option>
+                          <option value="afternoon">Afternoon</option>
+                          <option value="evening">Evening</option>
                         </select>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
-                            <select class="form-control" id="sel2" placeholder="" required>
-                        <option value="-1">-- How did you learn about us? --</option>
-                        <option value="1">Conventions</option>
-                        <option value="2">Guide Books</option>
-                        <option value="3">Web Search</option>
-                        <option value="4">Web Link</option>
-                        <option value="5">Trailer Life</option>
-                        <option value="6">Wheelers</option>
-                        <option value="7">WoodALL</option>
+                            <select class="form-control" id="about__us" placeholder="" required>
+                        <option value="">How did you learn about us?</option>
+                        <option value="conventions">Conventions</option>
+                        <option value="guidebooks">Guide Books</option>
+                        <option value="websearch">Web Search</option>
+                        <option value="weblink">Web Link</option>
+                        <option value="trailer">Trailer Life</option>
+                        <option value="wheelers">Wheelers</option>
+                        <option value="woodall">WoodALL</option>
                       </select>
                         </div>
                     </div>
@@ -162,51 +202,67 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
+                            <label for="date"> First day*</label>
+                            <input type="date" id="date" placeholder="First Day*" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="date"> Last day*</label>
+                            <input type="date" id="date" placeholder="Last Day*" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
                             <input type="number" class="form-control" name="NumberOfStays" id="NumberOfStays" placeholder="Number Of Stays*" required>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
-                            <input type="number" class="form-control" name="Call" id="Call" placeholder="For stays over 1 month call (800) 668-3581" required>
+                            <input type="tel" class="form-control" name="Call" id="Call" placeholder="For stays over 1 month call (800) 668-3581" required>
                         </div>
                     </div>
                     <div class="col-md-12 col-sm-12">
-                        <label class="NOP">Number Of Persons*</label>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="NOPR">1</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="NOPR">2</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio3" value="option3">
-                            <label class="form-check-label" for="NOPR">3</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio3" value="option4">
-                            <label class="form-check-label" for="NOPR">4</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio3" value="option5">
-                            <label class="form-check-label" for="NOPR">5 (Additional Charge)</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio3" value="option6">
-                            <label class="form-check-label" for="NOPR">6 (Additional Charge)</label>
+                        <div class="form-group form-geoup">
+                            <label class="NOP">Number Of Persons</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="NOPR">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="NOPR">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio3" value="option3">
+                                <label class="form-check-label" for="NOPR">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio3" value="option4">
+                                <label class="form-check-label" for="NOPR">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio3" value="option5">
+                                <label class="form-check-label" for="NOPR">5 (Additional Charge)</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="NOPR" id="inlineRadio3" value="option6">
+                                <label class="form-check-label" for="NOPR">6 (Additional Charge)</label>
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-md-12 col-sm-12">
-                        <label class="NOP">Number Of Pets*</label>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="NOP" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="NOP">1</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="NOP" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="NOP">2</label>
+                        <div class="form-group form-geoup">
+                            <label class="NOP">Number Of Pets</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="NOP" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="NOP">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="NOP" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="NOP">2</label>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-12 col-sm-12">
@@ -222,47 +278,51 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
-                        <label class="NOP">Type of RV</label>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="TOR" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="TOR">Motor Coach</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="TOR" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="TOR">Motor Home</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="TOR" id="inlineRadio3" value="option3">
-                            <label class="form-check-label" for="TOR">Fifth Wheel</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="TOR" id="inlineRadio3" value="option4">
-                            <label class="form-check-label" for="TOR">Trailer</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="TOR" id="inlineRadio3" value="option5">
-                            <label class="form-check-label" for="TOR">Camper</label>
+                        <div class="form-group form-geoup">
+                            <label class="NOP">Type of RV</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="TOR" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="TOR">Motor Coach</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="TOR" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="TOR">Motor Home</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="TOR" id="inlineRadio3" value="option3">
+                                <label class="form-check-label" for="TOR">Fifth Wheel</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="TOR" id="inlineRadio3" value="option4">
+                                <label class="form-check-label" for="TOR">Trailer</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="TOR" id="inlineRadio3" value="option5">
+                                <label class="form-check-label" for="TOR">Camper</label>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-12 col-sm-12">
-                        <label class="NOP">Number of Slide Outs</label>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="Noso" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="Noso">1</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="Noso" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="Noso">2</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="Noso" id="inlineRadio2" value="option4">
-                            <label class="form-check-label" for="Noso">3</label>
+                        <div class="form-group form-geoup">
+                            <label class="NOP">Number of Slide Outs</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Noso" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="Noso">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Noso" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="Noso">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Noso" id="inlineRadio2" value="option4">
+                                <label class="form-check-label" for="Noso">3</label>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <select class="form-control" id="sel1" placeholder="">
-                      <option value="-1">-- Length of RV --</option>
+                      <option value=""> Length of RV Feet</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -296,7 +356,7 @@
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <select class="form-control" id="sel1" placeholder="">
-                              <option value="-1">-- Total number of Pigs --</option>
+                              <option value="">Total number of Pigs</option>
                               <option value="1">1</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
@@ -321,7 +381,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 col-sm-12">
-                        <div class="form-group">
+                        <div class="form-group form-geoup">
                             <label class="NOP">Joined a Group?</label>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="Jog" id="inlineRadio1" value="option1">
@@ -331,34 +391,6 @@
                                 <input class="form-check-input" type="radio" name="Jog" id="inlineRadio2" value="option2">
                                 <label class="form-check-label" for="inlineRadio2">No</label>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <select class="form-control" id="sel1" placeholder="">
-                    <option value="-1">-- Total number of Pigs --</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-
-                  </select>
                         </div>
                     </div>
 
@@ -376,13 +408,13 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline acceptterms">
                             <input class="form-check-input" type="radio" name="checkbox" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="checkbox"> By selecting this box, I accept and understand the rules and regulations of Golden Shore RV Resort.</label>
+                            <label class="form-check-label acceptterms" for="checkbox"> By selecting this box, I accept and understand the rules and regulations of Golden Shore RV Resort.</label>
                         </div>
                     </div>
                     <div class="col-md-12 col-sm-12 mt-4">
-                        <h4>Daily Deposit</h4>
+                        <h4 class="daily__devotion">Daily Deposit</h4>
                         <p>First night deposit is required. Deposit(s) Will be refunded (less processing fee: $20) if the cancellation is received more than 2 days prior to arrival. Deposit(s) will be forfeited for cancellation(s) less than 48 hours prior
                             to arrival.
                         </p>
