@@ -21,20 +21,24 @@
             color: black;
         }
         
+        .value:hover {
+            color: blue !important;
+        }
+        
         h1 {
             font-family: 'ChunkFive', sans-serif;
             opacity: 1 !important;
         }
         
         .container {
-            padding-left: 200px;
-            padding-right: 200px;
+            padding-left: 150px;
+            padding-right: 180px;
         }
         
         hr {
             width: 100px;
             height: .3px;
-            padding-bottom: 30px;
+            padding-bottom: 30px8
         }
         
         p,
@@ -60,7 +64,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             padding-top: 100px;
             padding-bottom: 50 px;
-            color: #dc7546;
+            color: #CF6225;
         }
         
         .form-group {
@@ -84,7 +88,7 @@
             border: 0px;
             border-radius: 0px;
             color: white;
-            background-color: #dc7546;
+            background-color: #CF6225;
             font-size: small;
         }
         
@@ -203,21 +207,21 @@
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label for="date"> First day*</label>
-                            <input type="date" id="date" placeholder="Date*" value="" class="form-control">
+                            <input type="date" id="date" placeholder="mm/dd/yyyy*" value="" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label for="date"> Last day*</label>
-                            <input type="date" id="date" placeholder="Date*" value="" class="form-control">
+                            <input type="date" id="date" placeholder="mm/dd/yyyy*" value="" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
-                            <input type="number" class="form-control" name="NumberOfStays" id="NumberOfStays" placeholder="Number Of Stays*" required>
+                            <input type="text" class="form-control" name="NumberOfStays" id="NumberOfStays" placeholder="Number Of Stays*" required>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-12 col-sm-12">
                         <div class="form-group">
                             <input type="tel" class="form-control" name="Call" id="Call" placeholder="For stays over 1 month call (800) 668-3581" required>
                         </div>
@@ -356,7 +360,7 @@
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <select class="form-control" id="sel1" placeholder="">
-                              <option value="">Total number of Pigs</option>
+                              <option value="">Total Number of Rigs</option>
                               <option value="1">1</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
@@ -421,18 +425,18 @@
                     </div>
                     <div class="col-md-12 col-sm-12">
                         <h4>Weekly Deposit</h4>
-                        <p>$390.00 deposit is required for more than 2 weeks. $150.00 up to 2 weeks. Any changes or cancellations anytime forfeit $150.00 of your deposit</p>
+                        <p>$390.00 deposit is required for more than 2 weeks. $150.00 up to 2 weeks. Any changes or cancellations anytime forfeit $150.00 of your deposit.</p>
                     </div>
                     <div class="col-md-12 col-sm-12">
                         <h4>Conditions / Policies</h4>
                         <p>Check-In time: 2:00 pm – 7:00 pm<br> Check-Out time: 12 Noon</p>
                     </div>
                     <div class="col-md-12 col-sm-12">
-                        <p>RV sites are available for check-in after 2:00 pm Refunds will not be issued for early departure – no exceptions Reservations are recommended</p>
+                        <p>RV sites are available for check-in after 2:00 pm Refunds will not be issued for early departure – no exceptions Reservations are recommended.</p>
                     </div>
                     <div class="col-md-12 col-sm-12">
-                        <p>Rates are subject to change without prior noticeup to 2 weeks. Any changes or cancellations anytime forfeit $150.00 of your deposit Conditions / Policies Check-In time: 2:00 pm – 7:00 pm Check-Out time: Noon RV sites are available
-                            for check-in after 2PM Refunds will not be issued for early departure – no exceptions Reservations are recommended Rates are subject to change without prior notice</p>
+                        <p>Rates are subject to change without prior notice up to 2 weeks. Any changes or cancellations anytime forfeit $150.00 of your deposit. Conditions / Policies Check-In time: 2:00 pm – 7:00 pm Check-Out time: Noon. RV sites are available
+                            for check-in after 2PM. Refunds will not be issued for early departure – no exceptions. Reservations are recommended Rates are subject to change without prior notice.</p>
                     </div>
 
                     <div class="col-md-12 col-sm-12 text-center" id="button">
@@ -453,9 +457,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
-            $('form').submit(function(e) {
-
-            })
+            $('form').submit(function(e) {})
         })
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
