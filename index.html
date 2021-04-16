@@ -21,6 +21,13 @@
             color: black;
         }
         
+        @media only screen and (max-width: 1000px) {
+            .fifthwheel {
+                padding-top: 22px;
+                padding-bottom: 3px;
+            }
+        }
+        
         .value:hover {
             color: blue !important;
         }
@@ -121,9 +128,9 @@
             padding-top: 10px;
         }
         
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 1000px) {
             label.acceptterms {
-                padding-top: 50px;
+                padding-top: 22px;
             }
         }
     </style>
@@ -195,6 +202,7 @@
                         <option value="trailer">Trailer Life</option>
                         <option value="wheelers">Wheelers</option>
                         <option value="woodall">Woodalls</option>
+                        <option value="woodall">Other</option>
                       </select>
                         </div>
                     </div>
@@ -221,10 +229,8 @@
                             <input type="text" class="form-control" name="NumberOfStays" id="NumberOfStays" placeholder="Number Of Stays*" required>
                         </div>
                     </div>
-                    <div class="col-md-12 col-sm-12">
-                        <div class="form-group">
-                            <input type="tel" class="form-control" name="Call" id="Call" placeholder="For stays over 1 month call (800) 668-3581" required>
-                        </div>
+                    <div class="col-md-6 col-sm-12">
+                        <label>For stays over 1 month call <a href="tel:(800) 668-3581 ">(800) 668-3581</a> </label>
                     </div>
                     <div class="col-md-12 col-sm-12">
                         <div class="form-group form-geoup">
@@ -283,7 +289,7 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
                         <div class="form-group form-geoup">
-                            <label class="NOP">Type of RV</label>
+                            <label class="NOP">Type of RV*</label>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="TOR" id="inlineRadio1" value="option1">
                                 <label class="form-check-label" for="TOR">Motor Coach</label>
@@ -294,7 +300,7 @@
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="TOR" id="inlineRadio3" value="option3">
-                                <label class="form-check-label" for="TOR">Fifth Wheel</label>
+                                <label class="form-check-label fifthwheel" for="TOR">Fifth Wheel "*Fifth Wheel trailers longer than 15 feet require an additional charge"</label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="TOR" id="inlineRadio3" value="option4">
@@ -359,30 +365,9 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
-                            <select class="form-control" id="sel1" placeholder="">
-                              <option value="">Total Number of Rigs</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                              <option value="6">6</option>
-                              <option value="7">7</option>
-                              <option value="8">8</option>
-                              <option value="9">9</option>
-                              <option value="10">10</option>
-                              <option value="11">11</option>
-                              <option value="12">12</option>
-                              <option value="13">13</option>
-                              <option value="14">14</option>
-                              <option value="15">15</option>
-                              <option value="16">16</option>
-                              <option value="17">17</option>
-                              <option value="18">18</option>
-                              <option value="19">19</option>
-                              <option value="20">20</option>
-                            </select>
+                            <input type="number" class="form-control" name="number" id="tonr" placeholder="Total Number of Rigs" required>
                         </div>
+
                     </div>
                     <div class="col-md-12 col-sm-12">
                         <div class="form-group form-geoup">
@@ -432,11 +417,11 @@
                         <p>Check-In time: 2:00 pm – 7:00 pm<br> Check-Out time: 12 Noon</p>
                     </div>
                     <div class="col-md-12 col-sm-12">
-                        <p>RV sites are available for check-in after 2:00 pm Refunds will not be issued for early departure – no exceptions Reservations are recommended.</p>
+                        <p>RV sites are available for check-in after 2:00 pm. Refunds will not be issued for early departure – no exceptions. Reservations are recommended.</p>
                     </div>
                     <div class="col-md-12 col-sm-12">
                         <p>Rates are subject to change without prior notice up to 2 weeks. Any changes or cancellations anytime forfeit $150.00 of your deposit. Conditions / Policies Check-In time: 2:00 pm – 7:00 pm Check-Out time: Noon. RV sites are available
-                            for check-in after 2PM. Refunds will not be issued for early departure – no exceptions. Reservations are recommended Rates are subject to change without prior notice.</p>
+                            for check-in after 2PM. Refunds will not be issued for early departure – no exceptions. Reservations are recommended. Rates are subject to change without prior notice.</p>
                     </div>
 
                     <div class="col-md-12 col-sm-12 text-center" id="button">
