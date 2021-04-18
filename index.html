@@ -27,6 +27,19 @@
                 padding-bottom: 3px;
             }
         }
+        /* Original Solution found on Stackoverflow here:
+http://stackoverflow.com/questions/26573346/ios-safari-messes-up-input-type-date
+*/
+        
+        input[type="date"] {
+            display: block;
+            /* Solution 1 */
+            -webkit-appearance: textfield;
+            -moz-appearance: textfield;
+            min-height: 1.2em;
+            /* Solution 2 */
+            /* min-width: 96%; */
+        }
         
         .value:hover {
             color: blue !important;
@@ -331,30 +344,7 @@
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
-                            <select class="form-control" id="sel1" placeholder="">
-                      <option value=""> Length of RV Feet</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
-                      <option value="16">16</option>
-                      <option value="17">17</option>
-                      <option value="18">18</option>
-                      <option value="19">19</option>
-                      <option value="20">20</option>
-
-                    </select>
+                            <input type="number" class="form-control" name="number" id="tonr" placeholder="Length of RV Feet">
                         </div>
                     </div>
                 </div>
@@ -472,6 +462,27 @@
             }).fail(function(error) {
                 alert('Oops... ' + JSON.stringify(error));
             });
+        });
+    </script>
+    <script type="text/javascript">
+        var dateClass = '.datechk';
+        $(document).ready(function() {
+            if (document.querySelector(dateClass).type !== 'date') {
+                var oCSS = document.createElement('link');
+                oCSS.type = 'text/css';
+                oCSS.rel = 'stylesheet';
+                oCSS.href = '//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css';
+                oCSS.onload = function() {
+                    var oJS = document.createElement('script');
+                    oJS.type = 'text/javascript';
+                    oJS.src = '//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js';
+                    oJS.onload = function() {
+                        $(dateClass).datepicker();
+                    }
+                    document.body.appendChild(oJS);
+                }
+                document.body.appendChild(oCSS);
+            }
         });
     </script>
 
