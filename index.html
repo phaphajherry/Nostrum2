@@ -68,6 +68,14 @@ http://stackoverflow.com/questions/26573346/ios-safari-messes-up-input-type-date
             opacity: .7;
         }
         
+        input::-webkit-contacts-auto-fill-button {
+            visibility: hidden;
+            display: none !important;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+        }
+        
         input {
             opacity: .96;
         }
@@ -144,6 +152,12 @@ http://stackoverflow.com/questions/26573346/ios-safari-messes-up-input-type-date
         @media only screen and (max-width: 1000px) {
             label.acceptterms {
                 padding-top: 22px;
+            }
+        }
+        
+        @media only screen and (min-width: 1000px) {
+            .wheel {
+                padding-left: 160px;
             }
         }
     </style>
@@ -243,7 +257,7 @@ http://stackoverflow.com/questions/26573346/ios-safari-messes-up-input-type-date
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <label>For stays over 1 month call <a href="tel:(800) 668-3581 ">(800) 668-3581</a> </label>
+                        <label for="forstays" class="fsom">For stays over 1 month call <a href="tel:(800) 668-3581 ">(800) 668-3581</a> </label>
                     </div>
                     <div class="col-md-12 col-sm-12">
                         <div class="form-group form-geoup">
@@ -313,7 +327,7 @@ http://stackoverflow.com/questions/26573346/ios-safari-messes-up-input-type-date
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="TOR" id="inlineRadio3" value="option3">
-                                <label class="form-check-label fifthwheel" for="TOR">Fifth Wheel "*Fifth Wheel trailers longer than 15 feet require an additional charge"</label>
+                                <label class="form-check-label" for="TOR">Fifth Wheel*</label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="TOR" id="inlineRadio3" value="option4">
@@ -323,7 +337,12 @@ http://stackoverflow.com/questions/26573346/ios-safari-messes-up-input-type-date
                                 <input class="form-check-input" type="radio" name="TOR" id="inlineRadio3" value="option5">
                                 <label class="form-check-label" for="TOR">Camper</label>
                             </div>
+                            <br>
+                            <div class="form-check form-check-inline">
+                                <i class="text-center wheel">Fifth Wheel trailers longer than 15 feet require an additional charge</i>
+                            </div>
                         </div>
+
                     </div>
                     <div class="col-md-12 col-sm-12">
                         <div class="form-group form-geoup">
@@ -344,7 +363,7 @@ http://stackoverflow.com/questions/26573346/ios-safari-messes-up-input-type-date
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
-                            <input type="number" class="form-control" name="number" id="tonr" placeholder="Length of RV Feet">
+                            <input type="text" class="form-control" name="LORnum" id="tonr" placeholder="Length of RV Feet">
                         </div>
                     </div>
                 </div>
@@ -355,7 +374,7 @@ http://stackoverflow.com/questions/26573346/ios-safari-messes-up-input-type-date
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
-                            <input type="number" class="form-control" name="number" id="tonr" placeholder="Total Number of Rigs" required>
+                            <input type="text" class="form-control" name="number" id="tonr" placeholder="Total Number of Rigs" required>
                         </div>
 
                     </div>
